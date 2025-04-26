@@ -1,10 +1,17 @@
 import React from 'react'
+import Product from './Components/Product'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import ProductView from './Components/ProductView'
 
 function App() {
   return (
-    <div>
-      <h1>vishal tomar</h1>
-    </div>
+    <BrowserRouter>
+    <Routes>
+     <Route path='/' element={<Product/>} />
+     <Route path='/product/:productId' element={<ProductView/>} />
+     
+    </Routes>
+    </BrowserRouter>
   )
 }
 
